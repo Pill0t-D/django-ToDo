@@ -3,7 +3,7 @@ from .models import Task
 
 def task_list(request):
     """
-    Представление для отображения списка всех задач
+    View for displaying list of all tasks
     """
     tasks = Task.objects.all()
     context = {
