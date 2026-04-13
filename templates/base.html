@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Менеджер задач{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>📋 ToDo приложение</h1>
+        <nav>
+            <a href="{% url 'tasks:task_list' %}">Все задачи</a>
+            <!-- Позже добавим ссылку на создание -->
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Здесь будет контент конкретной страницы -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2025 Мой проект</p>
+    </footer>
+</body>
+</html>
